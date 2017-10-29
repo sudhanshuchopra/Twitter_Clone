@@ -85,7 +85,7 @@ sftp-config.json
 media/
 
 #private settings
-ultimate_tweet/settings_secret.py
+src/ultimate_tweet/ultimate_tweet/settings_secret.py
 
 #env files
 env/
