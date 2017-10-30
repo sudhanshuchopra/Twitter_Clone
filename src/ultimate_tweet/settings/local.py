@@ -53,7 +53,7 @@ ROOT_URLCONF = 'ultimate_tweet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,"templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,6 +79,10 @@ DATABASES = {
     }
 }
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static-storage"),
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -117,3 +121,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(os.path.dirname(BASE_DIR),"static")
